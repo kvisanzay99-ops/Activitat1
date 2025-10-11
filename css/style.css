@@ -67,3 +67,83 @@ h1, h2 {
 p {
     color: #666;
 }
+
+
+
+/* Formulari */
+form{
+    margin-left: 300px;
+    margin-right: 300px;
+    text-align: left;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #ccc;
+}
+
+form label{
+    font-weight: bold;
+    color: #333;
+}
+
+form input{
+    margin-bottom: 10px;
+}
+
+.div3{
+    color: #7c7272;
+    font-size: 9px;
+    margin-top: 3px;
+}
+
+
+/* reCaptcha inventat */
+body {
+    text-align: center;
+    margin-top: 100px;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.inline {
+    display: inline-block;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+#user-input input {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#image {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-left: 5px;
+}
+
+#btn {
+    margin-top: 15px;
+    padding: 7px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: #0069d9;
+}
+
+#key {
+    margin-top: 10px;
+    color: green;
+}
+
+
