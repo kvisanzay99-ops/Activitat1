@@ -127,90 +127,36 @@
   
 
 
-<!-- Formulario  -->
-<form style="max-width:420px; margin:50px auto; background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.07); padding:28px 20px;">
-  <h4 class="text-center mb-4 text-primary">Contacto</h4>
-  
-  <div class="mb-3">
-    <label class="form-label" for="correoInput">Correo electrónico</label>
-    <input type="email" id="correoInput" class="form-control" placeholder="tucorreo@ejemplo.com" required>
-    <div class="form-text">
-      (Nunca se compartirá tu correo electrónico con nadie.)
+<!-- Form  -->
+<div class="formulari">
+  <form style="max-width:430px; width:90%; background:#f8f9fa; border-radius:14px; box-shadow:0 4px 17px rgba(0,0,0,0.10); padding:20px 24px 32px 24px; border: 1.5px solid #cfe2ff;">
+    <h4 class="text-center mb-4 text-primary" style="font-size:2rem; font-weight:600; letter-spacing:1px;">Contacto</h4>
+    
+    <div class="mb-3">
+      <label class="form-label" for="correoInput">Correo electrónico</label>
+      <input type="email" id="correoInput" class="form-control" placeholder="tucorreo@ejemplo.com" required style="border-radius:6px;">
     </div>
-  </div>
-  
-  <div class="mb-3">
-    <label class="form-label" for="mensajeInput">Mensaje</label>
-    <textarea id="mensajeInput" class="form-control" rows="3" placeholder="Escribe aquí tu mensaje..." required></textarea>
-  </div>
-  
-  <div class="mb-3">
-    <label class="form-label" for="usertagInput">UserTag</label>
-    <input type="text" id="usertagInput" class="form-control" placeholder="@usuario">
-    <div class="form-text">
-      Responderemos en 3 días.
+    
+    <div class="mb-3">
+      <label class="form-label" for="mensajeInput">Mensaje</label>
+      <textarea id="mensajeInput" class="form-control" rows="3" placeholder="Escribe aquí tu mensaje..." required style="resize:vertical; min-height:80px;"></textarea>
     </div>
-  </div>
-  
-  <div class="form-check mb-3">
-    <input type="checkbox" class="form-check-input" id="verificadoCheck">
-    <label for="verificadoCheck" class="form-check-label">Verificado</label>
-  </div>
-  
-  <button type="submit" class="btn btn-primary w-100">Enviar</button>
-</form>
-
-
-
-<!-- reCaptha nomes per diversio tret de internet-->
-  
-<div style="max-width:400px; margin:30px auto; padding:26px 28px; border:1px solid #ccc; border-radius:14px; background-color:#fafafa; box-sizing:border-box;">
-  <label for="captcha-input" style="display:block; margin-bottom:12px;">Introduce el código CAPTCHA:</label>
-  <input type="text" id="captcha-input" placeholder="Escribe el código aquí"
-         style="width:100%; padding:12px 14px; margin-bottom:18px; border-radius:8px; border:1px solid #bbb; box-sizing:border-box;">
-
-  <div id="captcha-image"
-       style="margin-bottom:20px; text-align:center; font-size:22px; letter-spacing:5px;
-              background:#eee; border-radius:8px; padding:14px 0; border:1px solid #d0d0d0;">
-  
-  </div>
-
-  <div style="display: flex; gap:10px; justify-content:center; margin-bottom:20px;">
-    <button type="button" onclick="generateCaptcha();"
-            style="background:#1677ff; color:#fff; padding:9px 22px; border:none; border-radius:6px; cursor:pointer;">
-      Recargar código
-    </button>
-    <button type="button" onclick="validateCaptcha();"
-            style="background:#28a745; color:#fff; padding:9px 22px; border:none; border-radius:6px; cursor:pointer;">
-      Validar
-    </button>
-  </div>
-
-  <div id="captcha-message" style="margin-top:10px; font-size:15px; color:#d00000; min-height:24px;">
- 
-  </div>
+    
+    <div class="mb-3">
+      <label class="form-label" for="usertagInput">User</label>
+      <input type="text" id="usertagInput" class="form-control" placeholder="@usuario">
+    </div>
+    
+    <div class="form-check mb-3">
+      <input type="checkbox" class="form-check-input" id="verificadoCheck">
+      <label for="verificadoCheck" class="form-check-label text-success">Acepta los términos y condiciones</label>
+    </div>
+    
+    <button type="submit" class="btn btn-primary w-100" style="font-weight:bold; letter-spacing:1px;">Enviar</button>
+  </form>
 </div>
 
-<script>
-let captchaValue = "";
-function generateCaptcha() {
-  captchaValue = Math.random().toString(36).substring(2, 8).toUpperCase();
-  document.getElementById('captcha-image').textContent = captchaValue;
-  document.getElementById('captcha-message').textContent = "";
-  document.getElementById('captcha-input').value = "";
-}
-function validateCaptcha() {
-  const input = document.getElementById('captcha-input').value.toUpperCase();
-  if (input === captchaValue) {
-    document.getElementById('captcha-message').textContent = "¡Correcto, eres humano!";
-    document.getElementById('captcha-message').style.color = "#28a745";
-  } else {
-    document.getElementById('captcha-message').textContent = "Código incorrecto, vuelve a intentarlo.";
-    document.getElementById('captcha-message').style.color = "#d00000";
-  }
-}
-window.onload = generateCaptcha;
-</script>
+
 
 
 
