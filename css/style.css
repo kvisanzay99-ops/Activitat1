@@ -1,0 +1,130 @@
+/* styles.css */
+
+/* Reset de marges i padding */
+body {
+    font-family: 'Orbitron', sans-serif; 
+    background-color: #3b3a3a;
+    color: #000000; 
+}
+
+/* Estils per a la navbar */
+nav {
+  background: linear-gradient(90deg, #ffffff, #1a1a1a);
+  border-bottom: 2px solid #f36513;
+}
+nav ul li a {
+  color: #00ffff;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: #dfac22;
+  text-shadow: 0 0 10px #ee831fe3;
+}
+
+/*Per al navbar que baixi suau */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/*Per a que el titol no estigui pegat al navbar */
+header {
+  padding-top: 50px; 
+}
+
+
+/* Estils per al contenidor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estils per a les files i columnes */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.col {
+  background-color: #1a1a1a;
+  border: 1px solid #ff7300f1;
+  transition: transform 0.3s;
+}
+.col:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #ff7300f1;
+}
+
+
+/* Estils per a títols i paràgrafs */
+h1, h2 {
+    color: #000000;
+}
+
+p {
+    color: #000000;
+}
+
+
+/* Formulari posat tamb en flexbtox */
+
+.responsive {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px;
+}
+
+
+form {
+    background-color: #ff7300f1;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgb(73, 73, 73);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin: 40px auto; 
+}
+
+
+@media (max-width: 600px) {
+    .responsive {
+        flex-direction: column;
+    }
+    
+    form {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+/* Per a que eventos tingui també color taronja de fons */
+
+.accordion-button {
+  background-color: #ff7300f1;
+  color: white;
+}
+
+/* Per a que dins el carrousel tingui el text un fons i es pugui llegir be d'acord a la imatge */
+
+.carousel-caption {
+  background-color: #ff7300f1; /* fondo oscuro translúcido */
+  padding: 8px 12px; 
+  border-radius: 8px;
+}
+
+.carousel-caption h5 {
+  font-size: 1rem; /* tamaño más pequeño del título */
+  margin-bottom: 5px; 
+}
+
+.carousel-caption p {
+  font-size: 0.85rem; /* texto más pequeño */
+  margin-bottom: 0; 
+}
+
