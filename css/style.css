@@ -69,29 +69,35 @@ p {
 }
 
 
+/* Formulari posat tamb en flexbtox */
 
-/* Formulari */
-form{
-    margin-left: 300px;
-    margin-right: 300px;
-    text-align: left;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px #ccc;
+.responsive {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px;
 }
 
-form label{
-    font-weight: bold;
-    color: #333;
+
+form {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgb(73, 73, 73);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin: 40px auto; 
 }
 
-form input{
-    margin-bottom: 10px;
-}
 
-.div3{
-    color: #7c7272;
-    font-size: 9px;
-    margin-top: 3px;
+@media (max-width: 600px) {
+    .responsive {
+        flex-direction: column;
+    }
+    
+    form {
+        max-width: 100%;
+        padding: 20px;
+    }
 }
